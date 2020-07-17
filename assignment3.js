@@ -1,6 +1,10 @@
 function feetToMile(feet) {
+    if(feet<0){
+        return "Distance cannot be negative"
+    }else{
     var mile = feet / 5280;
     return mile;
+    }
 }
 let Feet = 100;
 console.log(feetToMile(Feet));
@@ -49,7 +53,7 @@ console.log(brickCalculator(height));
 
 
 function tinyFriend(friendarray){
-    var min=friendarray[0]
+    var min=friendarray[0];
     for(var i=1;i<friendarray.length;i++){
         if(min.length>friendarray[i].length){
             min=friendarray[i];
@@ -58,5 +62,5 @@ function tinyFriend(friendarray){
     return min;
 
 }
-let myfriends=["Esha","Tasnuva","Jaclin","Onika","Omi"];
+let myfriends=["Esha","Tasnuva","Jaclin","Onika","Omi","U"];
 console.log(tinyFriend(myfriends));
