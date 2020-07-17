@@ -6,7 +6,7 @@ function feetToMile(feet) {
     return mile;
     }
 }
-let Feet = 100;
+let Feet = 1000;
 console.log(feetToMile(Feet));
 
 
@@ -16,7 +16,8 @@ function woodCalculator(chair,table,bed){
     var woodforChair=1*chair;
     var woodfortable=3*table;
     var woodforbed=5*bed;
-    return (woodforChair+" "+woodfortable+" "+woodforbed);
+    var totalwoods=woodforChair+woodfortable+woodforbed;
+    return totalwoods;
 }
 let Chair=30;
 let Table=20;
@@ -27,27 +28,28 @@ console.log(woodCalculator(Chair,Table,Bed));
 
 
 function brickCalculator(height){
-    if(height<10){
-        var totalbricks=height*15;
+    var brick=1000;
+    if(height<=10){
+        var totalbricks=height*15*brick;
     }
-    else if(height<20)
+    else if(height<=20)
     {
         var secondheight=height-10;//17-10
-        var brickforfirstten=10*15;
-        var brickforsecondten=secondheight*12;
+        var brickforfirstten=10*15*brick;
+        var brickforsecondten=secondheight*12*brick;
         totalbricks=brickforfirstten+brickforsecondten;
     }
     else{
         var thirdheight=height-20;
-        brickforlastone=thirdheight*10;
-        brickforfirstten=10*15;
-        brickforsecondten=10*12;
+        brickforlastone=thirdheight*10*brick;
+        brickforfirstten=10*15*brick;
+        brickforsecondten=10*12*brick;
         totalbricks=brickforlastone+brickforfirstten+brickforsecondten;
 
     }
     return totalbricks;
 }
-let height=80;
+let height=17;
 console.log(brickCalculator(height));
 
 
